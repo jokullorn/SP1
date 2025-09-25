@@ -32,32 +32,32 @@ void setup() {
   line(width / 2, 0, width / 2, height);
   fill(255);
   
-  // Draw rectangles - Top 4 on each side
+  // Draw rectangle - Øverste 4 per side
   for (int i = 0; i < 4; i++) {
-    rect(0, 40 + i * 67, 727, 50);       // Left side
-    rect(762, 40 + i * 67, 727, 50);     // Right side
+    rect(0, 40 + i * 67, 727, 50);       // Venstre
+    rect(762, 40 + i * 67, 727, 50);     // Højre
   }
   
-  // Bottom 4 on each side
+  // Nederste 4
   for (int i = 0; i < 4; i++) {
-    rect(0, 342 + i * 67, 727, 50);      // Left side
-    rect(762, 342 + i * 67, 727, 50);    // Right side
+    rect(0, 342 + i * 67, 727, 50);      // Venstre
+    rect(762, 342 + i * 67, 727, 50);    // Højre
   }
 
-  // Add light blue trim to right edge of top 4 rectangles
+  // Lyseblå trim
   fill(#00CEFF);
   noStroke();
   
   for (int i = 0; i < 4; i++) {
-    rect(712, 38 + i * 67, 18, 55);      // Left side trim
-    rect(1474, 38 + i * 67, 18, 55);     // Right side trim
+    rect(712, 38 + i * 67, 18, 55);      // Venstre
+    rect(1474, 38 + i * 67, 18, 55);     // Højre
   }
   fill(#FEFF31);
   noStroke();
   
   for (int i = 0; i < 4; i++) {
-    rect(712, 340 + i * 67, 18, 55);      // Left side trim
-    rect(1474, 340 + i * 67, 18, 55);     // Right side trim
+    rect(712, 340 + i * 67, 18, 55);      // Venstre
+    rect(1474, 340 + i * 67, 18, 55);     // Højre
   }
 
   // Draw group headers and countries
@@ -129,16 +129,7 @@ void drawCountryWithFlag(int flagIndex, String name, int x, int y) {
   // Draw flag
   if (flagIndex < flagImages.length && flagImages[flagIndex] != null) {
     image(flagImages[flagIndex], flagX, flagY, flagSize, flagSize);
-  } else {
-    // Fallback: draw gray placeholder
-    fill(100);
-    noStroke();
-    rect(flagX, flagY, flagSize, flagSize);
-    fill(255);
-    textAlign(CENTER, CENTER);
-    textSize(8);
-    text("FLAG", flagX + flagSize / 2, flagY + flagSize / 2);
-  }
+  } 
   
   // Draw country name
   fill(0); // Black text
