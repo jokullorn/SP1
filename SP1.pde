@@ -21,9 +21,6 @@ void setup() {
   flagImages = new PImage[flagFiles.length];
   for (int i = 0; i < flagFiles.length; i++) {
     flagImages[i] = loadImage(flagFiles[i]);
-    if (flagImages[i] == null) {
-      println("Warning: Could not load " + flagFiles[i]);
-    }
   }
 
   background(#1F1E43);
