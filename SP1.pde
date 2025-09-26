@@ -131,6 +131,6 @@ void drawCountryWithFlag(int flagIndex, String name, int x, int y) {
   // Draw country name
   fill(0); // Black text
   textAlign(LEFT, CENTER);
-  textSize(20);
+  textSize(50);
   text(name, x + flagSize + 15, y + 25);
 }
